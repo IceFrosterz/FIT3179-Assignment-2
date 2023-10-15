@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Pie Chart with percentage_tooltip",
+    "width": 350,
+    "height": 250,
+    "data": {
+      "values": [
+        {"Drivers": "Champions", "Percentage of Champions": 33},
+        {"Drivers": "Non-Champions", "Percentage of Champions": 734}
+      ]
+    },
+    "mark": {"type": "arc", "tooltip": true},
+    "encoding": {
+      "theta": {"field": "Percentage of Champions", "type": "quantitative", "stack": "normalize"},
+      "color": {
+        "field": "Drivers",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Champions", "Non-Champions"],
+          "range": ["#FFFF00", "#000080"]
+        }
+      }
+    }
+  }
+  
