@@ -1,7 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A simple radial chart with embedded data.",
-  "data": { "url": "data/nationalitydrivers.json"},
+  "data": { "url": "data/nationalitydrivers.json" },
+  "transform": [
+    {
+      "filter": {"field": "index", "lte": 5}
+    }
+  ],
   "width": 350,
   "height": 350,
   "layer": [
@@ -14,9 +19,12 @@
           "field": "value",
           "type": "quantitative",
           "legend": {"title": "Number of Drivers"},
-          "scale": {"scheme": "viridis"} 
+          "scale": {"scheme": "goldgreen"}
         },
-        "tooltip": [{"field": "country", "type": "nominal", "title": "Nationality"}, {"field": "value", "type": "quantitative", "title": "Number of Drivers"} ]
+        "tooltip": [
+          {"field": "country", "type": "nominal", "title": "Nationality"},
+          {"field": "value", "type": "quantitative", "title": "Number of Drivers"}
+        ]
       }
     },
     {
