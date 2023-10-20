@@ -26,7 +26,7 @@
       "type": "ordinal",
       "scale": {
         "domain": ["Ferrari", "McLaren", "Mercedes", "Williams", "Red Bull", "Lotus", "Brabham", "Renault", "Benetton"],
-        "range": ["#ff2800","#ff8000","#00A19B","#00A0DE","#003773","#013220", "#023020", "#d4af37", "#2E3192"]
+        "range": ["#ff2800","#ff8000","#00A19B","#0052A5","#003773","#013220", "#F1A208", "#d4af37", "#507DBC"]
       }
     }
   },
