@@ -15,6 +15,10 @@
   <!-- Google font -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+  <!-- Google font for Heading-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
 
   <!-- custom style -->
   <style>
@@ -23,8 +27,16 @@
     }
 
     h1 {
-      font-weight: 700;
-      font-size: 40px;
+        font-weight: 300;
+        font-size: 60px;
+        font-family: 'Racing Sans One', sans-serif;
+        /* Center Position*/
+        text-align: center;
+    }
+
+    p {
+        font-family: 'Helvetica', sans-serif;
+        /* Use 'Helvetica' for P */
     }
 
     body {
@@ -108,9 +120,13 @@
     <div class="pure-g">
       <div class="pure-u-1-1">
         <h1>F1 - The Pinnacle of Motorsport</h1>
-        <p>This data has been collected from Fédération Internationale de l'Automobile (FIA): 
-        The FIA is the governing body for Formula 1 and oversees the sport's rules, regulations, and official statistics. 
-        It plays a significant role in gathering and verifying data related to races, race results, driver standings, and other related information.</p>
+        <div class="card">
+          <p>This data has been collected from Fédération Internationale de l'Automobile (FIA)</p>
+        </div>
+        <div class="card">
+          <!-- Second section content goes here -->
+      </div>
+      
       </div>
     </div>
     <!-- end pure grid group -->
@@ -127,7 +143,7 @@
     <div class="container">
       <div class="text-grid">
         <div class="text-item">The <b>United Kingdom</b> is a cornerstone of Formula 1 history, hosting numerous races at iconic circuits like Silverstone, Brands Hatch, and Donington Park. British drivers have made significant contributions to the sport, and Silverstone, a fast and demanding circuit, remains one of the most anticipated races on the F1 calendar.</div>
-        <div class="text-item">The <b>Monaco Grand Prix</b> is renowned for its prestige and allure. The race takes place on the narrow, winding streets of Monte Carlo, offering a unique challenge to drivers. Monaco is synonymous with glamour and history, attracting a worldwide audience and showcasing the opulence associated with Formula 1.</div>
+        <div class="text-item">The <b>Monaco</b> Grand Prix is renowned for its prestige and allure. The race takes place on the narrow, winding streets of Monte Carlo, offering a unique challenge to drivers. Monaco is synonymous with glamour and history, attracting a worldwide audience and showcasing the opulence associated with Formula 1.</div>
         <div class="text-item"><b>Italy</b> has a rich Formula 1 heritage, hosting the historic Italian Grand Prix at Monza, one of the fastest tracks on the calendar. Monza has witnessed legendary battles and is known for its long straights and high-speed corners. Italian passion for motorsport and the success of <span style="color:red; font-weight: bold;">Ferrari</span> contribute to the country's strong association with Formula 1.</div>
         <div class="text-item">The Circuit de Spa-Francorchamps in <b>Belgium</b> is renowned for its challenging layout, including the iconic Eau Rouge-Raidillon complex. The Belgian Grand Prix is celebrated for its unpredictable weather and thrilling races. Spa-Francorchamps remains a favorite among drivers and fans alike.</div>
         <div class="text-item"><b>Germany</b> has a rich motorsport tradition and has hosted several Formula 1 races at iconic tracks like Hockenheimring and Nürburgring. Hockenheimring, with its long straights and tight corners, has witnessed numerous memorable moments, while the Nürburgring, also known as the "Green Hell," is a historic and demanding circuit.</div>
@@ -202,10 +218,9 @@
           <h2>How many Drivers are <span style="color:rgb(151, 168, 0); font-weight: bold;">Champion</span></h2>
           <p>
             The term "Champion" is used to describe a driver who has won the F1 World Championship. 
-            There are 33 drivers who have won the F1 World Championship and 5 of them are still active in the sport.
+            There have been 775 drivers who have participated in F1, with only 33 drivers who have won the F1 World Championship and 3 of them are still active in the sport.
           </p>
-          <p>The most successful driver is <span style="color:red; font-weight: bold;">Michael Schumacher</span> with 7 world championships.</p>  
-          <p>The next most successful driver is <span style="color:#00A19B; font-weight: bold;">Lewis Hamilton</span> with 6 world championships.</p>
+          <p>The most successful drivers are <span style="color:red; font-weight: bold;">Michael Schumacher</span> and <span style="color:#00A19B; font-weight: bold;">Lewis Hamilton</span> with both winning 7 world championships.</p>  
         </div>
       </div>
       <div class="pure-u-1-2">
@@ -233,7 +248,7 @@
 
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
-        <p>This visualisation is created by <a href="https://github.com/IceFrosterz">Gabriel Aditya</a>. The data is
+        <p>This visualisation is created by <a href="https://github.com/IceFrosterz">Gabriel Aditya</a> for FIT3179 Assignment 2. The data is
           from multiple files found on <a
             href="https://www.statsf1.com"
             target="_blank">F1 Stats</href>.</p>
@@ -243,7 +258,6 @@
 
   <script type="text/javascript">
     var specVis1 = "./Visualisations/Choropleth.json";
-    var specVis2 = "./Visualisations/xxx.json";
     var specVis3 = "./Visualisations/InteractiveLineChart.vg.json";
     var specVis4 = "./Visualisations/BarChart.json";
     var specVis5 = "./Visualisations/PieChart.vg.json";
@@ -252,12 +266,6 @@
     vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
-
-    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    //make InteractiveLineChart.vg.json
     vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
@@ -272,5 +280,4 @@
     }).catch(console.error);
   </script>
 </body>
-
 </html>
